@@ -1,0 +1,13 @@
+#flow: Login
+#intent:
+# Open up our app and use the default credentials to login
+# and navigate to the demo screen
+
+appId: ${MAESTRO_APP_ID} # the app id of the app we want to test
+# Defined as the "package" under the "android" section and
+# "bundleIdentifier" under the "ios" section in `app.json` / `app.config.ts`.
+onFlowStart:
+  - runFlow: ../shared/_OnFlowStart.yaml
+---
+- runFlow: ../shared/_Login.yaml
+# @demo remove-file
